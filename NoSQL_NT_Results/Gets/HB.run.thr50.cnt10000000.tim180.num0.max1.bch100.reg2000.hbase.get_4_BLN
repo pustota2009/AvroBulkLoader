@@ -1,0 +1,103 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl site.ycsb:hbase2-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+/etc/alternatives/jre/bin/java -cp /etc/hbase/conf:/home/ec2-user/YCSB/hbase2/conf:/home/ec2-user/YCSB/hbase2/target/hbase2-binding-0.18.0-SNAPSHOT.jar:/home/ec2-user/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/home/ec2-user/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/ec2-user/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/home/ec2-user/.m2/repository/com/github/stephenc/findbugs/findbugs-annotations/1.3.9-1/findbugs-annotations-1.3.9-1.jar:/home/ec2-user/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/home/ec2-user/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/ec2-user/.m2/repository/org/apache/hbase/hbase-shaded-client/2.2.3/hbase-shaded-client-2.2.3.jar:/home/ec2-user/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar:/home/ec2-user/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/ec2-user/YCSB/core/target/core-0.18.0-SNAPSHOT.jar:/home/ec2-user/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/ec2-user/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/ec2-user/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar site.ycsb.Client -db site.ycsb.db.hbase2.HBaseClient2 -s -threads 50 -p table=usertable2000 -P workloads/workload -p recordcount=10000000 -p operationcount=0 -p columnfamily=cf -p maxexecutiontime=180 -p readproportion=1 -p updateproportion=0 -p insertproportion=0 -p batchsize=100 -t
+Command line: -db site.ycsb.db.hbase2.HBaseClient2 -s -threads 50 -p table=usertable2000 -P workloads/workload -p recordcount=10000000 -p operationcount=0 -p columnfamily=cf -p maxexecutiontime=180 -p readproportion=1 -p updateproportion=0 -p insertproportion=0 -p batchsize=100 -t
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+Maximum execution time specified as: 180 secs
+2021-09-12 20:30:45:782 0 sec: 0 operations; 
+2021-09-12 20:30:45,799 WARN  [Thread-51] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-09-12 20:30:45,936 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+2021-09-12 20:30:45,936 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:host.name=ip-172-31-32-81.us-east-2.compute.internal
+2021-09-12 20:30:45,936 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:java.version=1.8.0_272
+2021-09-12 20:30:45,936 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:java.vendor=Amazon.com Inc.
+2021-09-12 20:30:45,936 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:java.home=/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64/jre
+2021-09-12 20:30:45,936 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: /home/ec2-user/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/home/ec2-user/.m2/repository/com/github/stephenc/findbugs/findbugs-annotations/1.3.9-1/findbugs-annotations-1.3.9-1.jar:/home/ec2-user/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/home/ec2-user/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/ec2-user/.m2/repository/org/apache/hbase/hbase-shaded-client/2.2.3/hbase-shaded-client-2.2.3.jar:/home/ec2-user/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar:/home/ec2-user/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/ec2-user/YCSB/core/target/core-0.18.0-SNAPSHOT.jar:/home/ec2-user/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/ec2-user/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/ec2-user/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:os.name=Linux
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:os.arch=amd64
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:os.version=4.14.200-155.322.amzn2.x86_64
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:user.name=ec2-user
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:user.home=/home/ec2-user
+2021-09-12 20:30:45,937 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Client environment:user.dir=/home/ec2-user/YCSB
+2021-09-12 20:30:45,938 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Initiating client connection, connectString=ip-172-31-35-219.us-east-2.compute.internal:2181 sessionTimeout=90000 watcher=org.apache.hadoop.hbase.zookeeper.ReadOnlyZKClient$$Lambda$14/956130601@4a3711e7
+2021-09-12 20:30:45,967 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150-SendThread(ip-172-31-35-219.us-east-2.compute.internal:2181)] zookeeper.ClientCnxn: Opening socket connection to server ip-172-31-35-219.us-east-2.compute.internal/172.31.35.219:2181. Will not attempt to authenticate using SASL (unknown error)
+2021-09-12 20:30:45,970 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150-SendThread(ip-172-31-35-219.us-east-2.compute.internal:2181)] zookeeper.ClientCnxn: Socket connection established to ip-172-31-35-219.us-east-2.compute.internal/172.31.35.219:2181, initiating session
+2021-09-12 20:30:45,973 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150-SendThread(ip-172-31-35-219.us-east-2.compute.internal:2181)] zookeeper.ClientCnxn: Session establishment complete on server ip-172-31-35-219.us-east-2.compute.internal/172.31.35.219:2181, sessionid = 0x100000291151f00, negotiated timeout = 40000
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2021-09-12 20:30:55:770 10 sec: 374 operations; 37,4 current ops/sec; [READ: Count=374, Max=5611519, Min=317184, Avg=1246661,82, 90=3260415, 99=5332991, 99.9=5611519, 99.99=5611519] 
+2021-09-12 20:31:05:770 20 sec: 1321 operations; 94,7 current ops/sec; [READ: Count=947, Max=813055, Min=198784, Avg=529978,46, 90=664575, 99=760319, 99.9=804351, 99.99=813055] 
+2021-09-12 20:31:15:770 30 sec: 2347 operations; 102,6 current ops/sec; [READ: Count=1026, Max=847359, Min=99712, Avg=489318,27, 90=626687, 99=753151, 99.9=820223, 99.99=847359] 
+2021-09-12 20:31:25:770 40 sec: 3518 operations; 117,1 current ops/sec; [READ: Count=1171, Max=748543, Min=175488, Avg=426765,99, 90=560127, 99=656895, 99.9=728063, 99.99=748543] 
+2021-09-12 20:31:35:770 50 sec: 4710 operations; 119,2 current ops/sec; [READ: Count=1192, Max=840191, Min=2724, Avg=420679,33, 90=561151, 99=687103, 99.9=775167, 99.99=840191] 
+2021-09-12 20:31:45:770 60 sec: 5962 operations; 125,2 current ops/sec; [READ: Count=1252, Max=795647, Min=142848, Avg=400627,58, 90=530431, 99=645631, 99.9=754175, 99.99=795647] 
+2021-09-12 20:31:46,182 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150] zookeeper.ZooKeeper: Session: 0x100000291151f00 closed
+2021-09-12 20:31:46,184 INFO  [ReadOnlyZKClient-ip-172-31-35-219.us-east-2.compute.internal:2181@0x114cd150-EventThread] zookeeper.ClientCnxn: EventThread shut down for session: 0x100000291151f00
+2021-09-12 20:31:55:770 70 sec: 7316 operations; 135,4 current ops/sec; [READ: Count=1354, Max=841215, Min=98944, Avg=368730,33, 90=501759, 99=629247, 99.9=815615, 99.99=841215] 
+2021-09-12 20:32:05:770 80 sec: 8652 operations; 133,6 current ops/sec; [READ: Count=1336, Max=706559, Min=17040, Avg=376191,56, 90=513023, 99=625663, 99.9=679423, 99.99=706559] 
+2021-09-12 20:32:15:770 90 sec: 10063 operations; 141,1 current ops/sec; [READ: Count=1411, Max=730623, Min=78080, Avg=353073,3, 90=478719, 99=577535, 99.9=709119, 99.99=730623] 
+2021-09-12 20:32:25:770 100 sec: 11479 operations; 141,6 current ops/sec; [READ: Count=1416, Max=714751, Min=128320, Avg=351916,14, 90=474879, 99=596991, 99.9=713215, 99.99=714751] 
+2021-09-12 20:32:35:770 110 sec: 12925 operations; 144,6 current ops/sec; [READ: Count=1446, Max=698367, Min=68544, Avg=346576,77, 90=478207, 99=600575, 99.9=689151, 99.99=698367] 
+2021-09-12 20:32:45:770 120 sec: 14387 operations; 146,2 current ops/sec; [READ: Count=1462, Max=734719, Min=17664, Avg=341380,23, 90=472831, 99=581119, 99.9=661503, 99.99=734719] 
+2021-09-12 20:32:55:770 130 sec: 15830 operations; 144,3 current ops/sec; [READ: Count=1443, Max=720895, Min=88000, Avg=344837,08, 90=464895, 99=580095, 99.9=695807, 99.99=720895] 
+2021-09-12 20:33:05:770 140 sec: 17344 operations; 151,4 current ops/sec; [READ: Count=1514, Max=720895, Min=9136, Avg=333366,73, 90=461823, 99=575999, 99.9=647679, 99.99=720895] 
+2021-09-12 20:33:15:775 150 sec: 18867 operations; 152,21 current ops/sec; [READ: Count=1523, Max=683519, Min=110208, Avg=328886, 90=459775, 99=565247, 99.9=651775, 99.99=683519] 
+2021-09-12 20:33:25:770 160 sec: 20308 operations; 144,19 current ops/sec; [READ: Count=1441, Max=695295, Min=115200, Avg=344616,64, 90=476927, 99=602111, 99.9=686591, 99.99=695295] 
+2021-09-12 20:33:35:770 170 sec: 21710 operations; 140,2 current ops/sec; [READ: Count=1402, Max=786943, Min=27776, Avg=356957,03, 90=493055, 99=620543, 99.9=748543, 99.99=786943] 
+2021-09-12 20:33:45:770 180 sec: 23202 operations; 149,2 current ops/sec; [READ: Count=1492, Max=713727, Min=146304, Avg=337100,78, 90=461567, 99=581119, 99.9=683007, 99.99=713727] 
+Maximum time elapsed. Requesting stop for the workload.
+Stop requested for workload. Now Joining!
+2021-09-12 20:33:45:997 180 sec: 23253 operations; 224,67 current ops/sec; [READ: Count=51, Max=461311, Min=156288, Avg=286905,73, 90=404223, 99=456447, 99.9=461311, 99.99=461311] [CLEANUP: Count=100, Max=31359, Min=0, Avg=322,64, 90=16, 99=256, 99.9=31359, 99.99=31359] 
